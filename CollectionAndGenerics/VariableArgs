@@ -1,0 +1,38 @@
+package Collections.challenges;
+/*
+
+Write a method concatenate Strings that takes variable arguments of String type
+and concatenates them into one string
+
+ */
+public class VarArgs {
+
+
+
+    public static String Concatenate(String ... any) {
+        StringBuilder sb=new StringBuilder();
+        if(any.length<2){
+            return "Min 2 arguments expected";
+        }
+
+        for(String k:any) {
+
+
+            sb.append(k);
+        }
+        return sb.toString();
+
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Concatenate("haadi"));
+        System.out.println(Concatenate("haadinho","10"));
+        System.out.println(Concatenate("haadinho","10","is","awesome"));
+
+
+
+
+
+
+    }
+}
