@@ -1,0 +1,29 @@
+package Collections.challenges;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
+/*
+Write a method that swaps two elements in an Array List given their indices
+ */
+public class SwapElements {
+    public static void Swap(List<String> list,int index1,int index2){
+        String temp;
+        //Replaces the element at the specified position in this list with the specified element
+
+        temp=list.get(index1);
+        list.set(index1,list.get(index2));
+        list.set(index2,temp);
+    }
+
+
+    public static void main(String[] args) {
+        List<String> list1= Arrays.asList("java","c++","python");
+        //0,1,2
+        System.out.println(list1);
+        Swap(list1,0,2);
+        System.out.println(list1);
+
+    }
+
+}
