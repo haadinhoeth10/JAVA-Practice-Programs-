@@ -1,0 +1,39 @@
+/* Write a program that takes a string and returns number of unique
+        characters in it
+         
+ */
+
+package Collections.challenges;
+
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+
+public class StringUniqueCharacters {
+    public static void main(String[] args) {
+        String name="haadiinho10";
+        Set<Character> sets = new HashSet<>();
+        Set<Character> set2 = new HashSet<>();
+
+
+        for(int i=0;i<name.length();i++){
+            Character c=name.charAt(i);
+            sets.add(c);
+
+        }
+
+        System.out.println(sets);
+        System.out.printf("No of unique characters in string are %d",sets.size());
+        System.out.println("\n\nApproach 2");
+
+        //Approach 2
+        for (char c : name.toCharArray()) {
+            set2.add(c);
+
+        }
+        System.out.printf("No of unique characters in string are %d",set2.size());
+
+
+    }
+
+}
